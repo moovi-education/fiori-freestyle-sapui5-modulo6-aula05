@@ -1,0 +1,20 @@
+<mvc:View controllerName="moovi.m06a05.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <List id="companyList" items="{/SpfliSet}" headerText="{i18n>company_list_header_txt}">
+                <ObjectListItem id="scarrObjLstItem" title="{Cityfrom} {i18n>txt_to}  {Cityto}" type="Active" >   
+                    <firstStatus>
+                    <ObjectStatus id="objStatus"
+                        text="{Fltime}"
+                        state="{= ${Fltime} > 300 ? 'Error' : 'Success'}" />
+                </firstStatus>
+
+                    <ObjectAttribute id="carrAttr" text="{Carrid}"></ObjectAttribute>
+                    <ObjectAttribute id="conAttr" text="{Connid}"></ObjectAttribute>                
+                </ObjectListItem>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
